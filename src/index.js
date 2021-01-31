@@ -2,7 +2,6 @@ module.exports = function check(str, bracketsConfig) {
     let openBracket = {};
     let closeBracket = {};
     let stek = [];
-    let checker = true;
 
     if (str.length % 2 !== 0) return false;
 
@@ -29,10 +28,3 @@ module.exports = function check(str, bracketsConfig) {
     if (stek.length === 0) return true;
     else return false;
 };
-
-console.log(
-    module.exports("|()|(||)||", [
-        ["(", ")"],
-        ["|", "|"],
-    ])
-);
